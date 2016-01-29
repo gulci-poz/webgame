@@ -1,0 +1,8 @@
+#gameCanvas {
+    border: black 1px solid;
+}
+
+#spaceship {
+    //visibility: hidden;
+    display: none;
+}
