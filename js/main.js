@@ -3,12 +3,17 @@
 
 (function () {
 
+    var lastTime = 0;
+    var vendors = ["ms", "moz", "webkit", "o"];
+
+    //======================================================================
+
     $(window).load(function () {
         gamePlay.init(levelsPlay, loaderPlay);
-    });
 
-    $("#playGameButton").click(function () {
-        gamePlay.showLevelScreen();
+        $("#playGameButton").click(function () {
+            gamePlay.showLevelScreen();
+        });
     });
 
     var game = {
@@ -48,6 +53,12 @@
 
         start: function () {
             console.log("Play the Game!");
+
+            // tutaj uruchomimy pętlę animacji
+        },
+
+        animate: function () {
+            // tutaj będziemy rysowali level
         }
     };
 
