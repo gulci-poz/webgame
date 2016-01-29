@@ -1,3 +1,65 @@
-#gameCanvas {
-    border: black 1px solid;
+#gameContainer {
+    width: 640px;
+    height: 480px;
+    background: url(../img/game/splashscreen.png);
+    border: 1px solid black;
+}
+
+.gameLayer {
+    width: 640px;
+    height: 480px;
+    /* wszystkie warstwy (ekrany gry) będą jedna na drugiej */
+    position: absolute;
+    display: none;
+}
+
+#gameStartScreen {
+    /* stara wersja:
+    padding-top: 250px;
+    text-align: center;
+    */
+
+    /* wyświetlam obrazki z menu startowego jako elementy blokowe; text-align działa dla elementów inline, a nie block */
+    /* top = (480px - 55px - 39px - 1 margin między obrazkami 10px) / 2 */
+    /* left = (640px - 133px) / 2 dokładnie 253.5px */
+    /* pozycja w absolute mogła by być określona za pomocą top i left, jest to bardziej estetyczne podejście niż używanie padding, ale w razie zmiany layoutu danego ekranu, np. tła, będziemy mieli przesuniętego całego diva, nie będzie sie on pokrywał z canvas i głównym kontenerem gry */
+    /* nowa wersja: */
+    padding-top: 188px;
+    padding-left: 253px;
+}
+
+#gameStartScreen img {
+    margin: 10px;
+    cursor: pointer;
+    /* nowa wersja: */
+    display: block;
+}
+
+#levelSelectScreen {
+    padding-top: 150px;
+    padding-left: 50px;
+}
+
+#levelSelectScreen input {
+    margin: 20px;
+    cursor: pointer;
+    background: url(../img/game/icons/level.png) no-repeat;
+    color: yellow;
+    font-size: 20px;
+    width: 64px;
+    height: 64px;
+    border: 0;
+}
+
+#loadingScreen {
+    background: rgba(100, 100, 100, 0.3);
+}
+
+#loadingMessage {
+    margin-top: 400px;
+    text-align: center;
+    height: 48px;
+    color: white;
+    background: url(../img/game/loader.gif) no-repeat center;
+    font: 12px Arial;
 }

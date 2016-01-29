@@ -2,15 +2,45 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" charset="utf-8" href="css/main.css">
         <title>Froot Wars</title>
     </head>
 
     <body>
-        <canvas id="gameCanvas" width="640" height="480">
-            Your browser does not support canvas tag.
-        </canvas>
+        <div id="gameContainer">
+            <canvas id="gameCanvas" class="gameLayer" width="640" height="480">
+                Your browser does not support canvas tag.
+            </canvas>
 
-        <script src="js/main.js"></script>
+            <div id="scoreScreen" class="gameLayer">
+                <img id="toggleMusic" src="img/game/icons/sound.png">
+                <img src="img/game/icons/prev.png">
+                <span id="score">Score: 0</span>
+            </div>
+
+            <div id="gameStartScreen" class="gameLayer">
+                <img id="playGameButton" src="img/game/icons/play.png" alt="Play Game">
+                <img src="img/game/icons/settings.png" alt="Settings">
+            </div>
+
+            <div id="levelSelectScreen" class="gameLayer">
+            </div>
+
+            <div id="loadingScreen" class="gameLayer">
+                <div id="loadingMessage"></div>
+            </div>
+
+            <div id="endingScreen" class="gameLayer">
+                <div>
+                    <p id="endingMessage">The Level is Over Message</p>
+                    <p id="playCurrentLevel"><img src="img/game/icons/prev.png">Replay Current Level</p>
+                    <p id="playNextLevel"><img src="img/game/icons/next.png">Play Next Level</p>
+                    <p id="showLevelScreen"><img src="img/game/icons/return.png">Return to Level Screen</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>

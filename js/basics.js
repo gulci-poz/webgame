@@ -6,7 +6,7 @@
 (function () {
 
 // obiekt zdarzenia jest przekazywany do funkcji jako pierwszy parametr
-// onload używamy w html i przypisujemy wtedy wykonanie funkcji
+// onload jest dla wybranych tagów html, np. image; w JS jest to przypisanie funkcji, w samym html to przypisanie wykonania funkcji
 
 document.addEventListener("DOMContentLoaded", bodyLoaded, false);
 
